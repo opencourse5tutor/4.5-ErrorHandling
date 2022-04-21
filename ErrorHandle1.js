@@ -1,14 +1,12 @@
-var fs = require('fs')
+const fs = require('fs')
+
+const content = 'This is the content which will write to text file!'
 
 try {
-console.log("This is the start of the try block")
-const data = fs.readFileSync('node.txt', 'utf8')
-console.log(data)
-console.log("This is the end of the try block")
+  fs.writeFileSync('test.txt', content)
+  //file written successfully
 } catch (err) {
-  console.log(err)
+  console.error(err)
 }
-
-console.log("This is the end of the try..catch example")
 
 
